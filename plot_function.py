@@ -64,4 +64,6 @@ plt.xlabel("Valeur de caractèristique")
 plt.ylabel("Densité")
 plt.ylim(0, 1)
 plt.xlim(xmin, xmax)
-plt.show()
+# plt.show()
+
+plt.savefig("./gmm.pdf")
