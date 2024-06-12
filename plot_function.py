@@ -60,6 +60,8 @@ line, = plt.plot(t, gaussian_mixture_model, lw=2, color="red", linestyle=":")
 line.set_label("Modèle de mélange gaussien")
 
 plt.legend()
+plt.xlabel("Valeur de caractèristique")
+plt.ylabel("Densité")
 plt.ylim(0, 1)
 plt.xlim(xmin, xmax)
 plt.show()
