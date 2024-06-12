@@ -47,16 +47,19 @@ gaussian_mixture_model = s[0].copy()
 for i in range(1, len(s)):
     gaussian_mixture_model += s[i]
 
+
+
 colors = ["#9673A6", "#6C8EBF", "#D79B00", "#82B366"]
 for i in range(len(s)):
     line, = plt.plot(t, s[i], lw=2, color=colors[i])
     ax.fill_between(t, s[i], alpha=0.4, color=colors[i])
+    line.set_label("μ=" + str(esperances[i]) + ", σ=" + str(equarts[i]) + ", w=" + str(weights[i]))
+
 
 line, = plt.plot(t, gaussian_mixture_model, lw=2, color="red", linestyle=":")
+line.set_label("Modèle de mélange gaussien")
 
-
-
-
+plt.legend()
 plt.ylim(0, 1)
 plt.xlim(xmin, xmax)
 plt.show()
