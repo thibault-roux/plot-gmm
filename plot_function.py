@@ -16,12 +16,6 @@ if not plot:
     gaussian_value(esperance=10, equart=0.1, x=10)
     gaussian_value(esperance=10, equart=0.1, x=1)
     gaussian_value(esperance=10, equart=0.1, x=1000000)
-
-
-
-
-
-
     exit()
 
 
@@ -46,7 +40,7 @@ equarts = [0.35, 0.35, 0.3, 0.5]
 weights = [0.5, 0.3, 0.1, 0.1]
 
 for i in range(len(esperances)):
-    sx = gaussian(esperances[i], equarts[i], weights[i])
+    sx = gaussian(esperances[i], equarts[i], t, weights[i])
     s.append(sx)
 
 gaussian_mixture_model = s[0].copy()
